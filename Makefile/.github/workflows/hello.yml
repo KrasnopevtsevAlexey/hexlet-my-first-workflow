@@ -1,22 +1,15 @@
-name: Hello world WorkFlow
-
-
+name: Hello World Workflow
 
 on:
- push:
-branches: [ main ]
-pull_request:
-branches: [ main ]
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
 
 jobs:
-
-say-hello:
-runs-on: ubuntu-latest
-
-
-steps:
-
--uses: actions/checkout@v3
-
--name: Run say-hello
-run: make say-hello
+  say-hello:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Run say-hello
+        run: make say-hello
